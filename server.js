@@ -21,10 +21,10 @@ app.use(function(req, res, next) {
   next();
 });
 
-// app.use(cors({
-//     origin: 'https://theclinic.herokuapp.com/',
-//     credentials: true
-// }));
+app.use(cors({
+    origin: 'https://theclinic.herokuapp.com',
+    credentials: true
+}));
 
 app.use("/upload-photo", function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "https://theclinic.herokuapp.com");
