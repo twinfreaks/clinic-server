@@ -14,17 +14,17 @@ app.use("/files", express.static('files'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-/*app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3009");
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "https://theclinic.herokuapp.com");
   res.header("Access-Control-Allow-Headers", "authorization, Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Methods", "GET,HEAD,PUT,PATCH,POST,DELETE");
   next();
-});*/
+});
 
-app.use(cors({
-    origin: 'https://theclinic.herokuapp.com/',
-    credentials: true
-}));
+// app.use(cors({
+//     origin: 'https://theclinic.herokuapp.com/',
+//     credentials: true
+// }));
 
 app.use("/upload-photo", function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "https://theclinic.herokuapp.com/");
