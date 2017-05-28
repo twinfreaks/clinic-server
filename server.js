@@ -44,6 +44,6 @@ app.get('/', function (req, res) {
 // init controllers
 require('./controllers/index')(app);
 
-app.listen(3000, function () {
+app.listen((process.env.PORT || 5000), function () {
     console.log('Server listening on port 3000!');
 });
