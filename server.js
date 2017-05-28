@@ -22,12 +22,12 @@ app.use(bodyParser.json());
 });*/
 
 app.use(cors({
-    origin: 'https://theclinic.herokuapp.com/',
+    origin: 'https://theclinic.herokuapp.com',
     credentials: true
 }));
 
 app.use("/upload-photo", function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://theclinic.herokuapp.com/");
+  res.header("Access-Control-Allow-Origin", "https://theclinic.herokuapp.com");
   res.header("Access-Control-Allow-Credentials", true);
   next();
 });
