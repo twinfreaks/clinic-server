@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "ExpressJs server app",
   "author": "Max Stefanko",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "agenda": "0.9.1",
     "body-parser": "1.17.1",
